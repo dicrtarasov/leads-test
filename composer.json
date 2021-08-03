@@ -4,7 +4,7 @@
     "license": "proprietary",
     "description": "Тестовое задание Leads.Tech",
     "keywords": ["dicr", "yii2", "test", "Leads.Tech"],
-    "homepage": "https://github.com/dicrtarsov/leads-test",
+    "homepage": "https://github.com/dicrtarasov/leads-test",
     "authors": [
         {
             "name": "Igor A Tarasov",
@@ -14,7 +14,7 @@
         }
     ],
     "support": {
-        "source": "https://github.com/dicrtarsov/leads-test.git"
+        "source": "https://github.com/dicrtarasov/leads-test.git"
     },
     "autoload": {
         "psr-4": {
