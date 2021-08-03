@@ -1,0 +1,35 @@
+{
+    "name": "dicr/leads-test",
+    "type": "project",
+    "license": "proprietary",
+    "description": "Тестовое задание Leads.Tech",
+    "keywords": ["dicr", "yii2", "test", "Leads.Tech"],
+    "homepage": "https://github.com/dicrtarsov/leads-test",
+    "authors": [
+        {
+            "name": "Igor A Tarasov",
+            "email": "develop@dicr.org",
+            "homepage": "https://dicr.org",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "source": "https://github.com/dicrtarsov/leads-test.git"
+    },
+    "autoload": {
+        "psr-4": {
+            "dicr\\leads_test\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "~8.0.1",
+        "ext-pcntl": "*",
+        "ext-sysvmsg": "*",
+        "vladimir163/lead-generator": "*"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
+    }
+}

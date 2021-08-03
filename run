@@ -1,0 +1,36 @@
+#!/usr/bin/env php8.0
+<?php
+/**
+ * @copyright 2019-2021 Dicr http://dicr.org
+ * @author Igor A Tarasov <develop@dicr.org>
+ * @license proprietary
+ * @version 04.08.21 03:20:37
+ */
+
+declare(strict_types = 1);
+
+// composer autoloader
+require_once __DIR__ . '/vendor/autoload.php';
+
+// логгер
+$logger = new dicr\leads_test\FileLogger(__DIR__ . '/run.log');
+
+// обработчик лидов
+$handler = new dicr\leads_test\DummyLeadsHandler($logger);
+
+// генератор
+$generator = new LeadGenerator\Generator();
+
+/** @var int $startTime засекаем время */
+$startTime = time();
+
+// поехали
+if ($handler->processLeadsQueue($generator)) {
+    /** @var int $workTime время работы, сек */
+    $workTime = time() - $startTime;
+
+    printf(
+        "Обработка завершена (отправлено: %d лидов, время работы: %02d:%02d)\n",
+        $handler::LEADS_COUNT, intdiv($workTime, 60), $workTime % 60
+    );
+}
