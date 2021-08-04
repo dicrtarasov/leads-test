@@ -3,7 +3,7 @@
  * @copyright 2019-2021 Dicr http://dicr.org
  * @author Igor A Tarasov <develop@dicr.org>
  * @license proprietary
- * @version 04.08.21 04:01:10
+ * @version 04.08.21 05:04:05
  */
 
 declare(strict_types = 1);
@@ -76,6 +76,8 @@ class DummyLeadsHandler implements LeadsHandlerInterface
      */
     public function processLeadsQueue(Generator $generator): bool
     {
+        echo 'Запуск обработки ' . self::LEADS_COUNT . " лидов ...\n";
+
         /** @var bool $isChild дочерний процесс */
         $isChild = false;
 

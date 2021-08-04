@@ -1,0 +1,6 @@
+/.git
+/.dockerignore
+/.gitignore
+/composer.*
+/Dockerfile
+/*.log

@@ -27,8 +27,16 @@
 
 ### Запуск
 
+#### Локально:
+
 ```shell
 ./run
+```
+
+#### Docker (https://hub.docker.com/r/dicrtarasov/leads-test):
+
+```shell
+docker run -it dicrtarasov/leads-test
 ```
 
 ### Результаты работы
